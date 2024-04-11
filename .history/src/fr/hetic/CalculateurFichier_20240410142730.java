@@ -23,6 +23,7 @@ public class CalculateurFichier {
             PrintWriter writer = new PrintWriter(dossierOp + "/" + fichier.getName().replace(".op", ".res"));
 
             try {
+                @SuppressWarnings("resource")
                 BufferedReader reader = new BufferedReader(new FileReader(fichier));
                 String ligne = reader.readLine();
                 while (ligne != null) {
